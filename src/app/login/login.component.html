@@ -1,0 +1,27 @@
+<!-- login component html -->
+ <div>
+    <h2>Login Form</h2>
+    <!-- src/app/your-component/your-component.component.html -->
+<button mat-button>Click me!</button>
+<!-- <button mat-raised-button>Click me!</button>
+<button mat-icon-button>
+  <mat-icon>favorite</mat-icon>
+</button>
+<button mat-fab>
+  <mat-icon>add</mat-icon>
+</button>
+<button mat-mini-fab>
+  <mat-icon>edit</mat-icon>
+</button> -->
+
+    <form action="">
+        <label for="username">Username:</label>
+        <input id="username" [(ngModel)]="username" name="username">
+        <br>
+        <label for="password">Password:</label>
+        <input id="password" type="password" [(ngModel)]="password" name="password">
+        <br>
+        <button (click)="login()" mat-flat-button>Login here</button>
+        <mat-icon>edit</mat-icon>
+    </form>
+ </div>
