@@ -1,13 +1,21 @@
+// src/app/app.component.ts
 import { Component } from '@angular/core';
-import { RouterOutlet } from '@angular/router';
+import { DisplayComponent } from './display/display.component';
+import { LoginComponent } from './login/login.component';
+import { CommonModule } from '@angular/common';
+import { FormsModule } from '@angular/forms';
+
+// Angular Material
+import { MatSlideToggleModule } from '@angular/material/slide-toggle';
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [RouterOutlet],
+  imports: [CommonModule, FormsModule, DisplayComponent, LoginComponent,MatSlideToggleModule],
   templateUrl: './app.component.html',
-  styleUrl: './app.component.css'
+  styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'AngularFirstProject';
+  title = 'my-app';
+  username: string = '';
 }
